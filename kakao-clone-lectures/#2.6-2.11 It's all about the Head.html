@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <link 
+        rel="shortcut icon"
+        sizes="16x16 32x32 64x64"
+        href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico"
+    />
+    <title>Home - My first website.</title>
+    <meta name="description" content="This is my website"/>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <form>
+        <label for="profile">Profile Photo</label> <!--label태그는 input 태그와 함께여야 동작하고 label 태그는 for이라는 attribute를 써준다.-->
+        <input id="profile" type="file" accept=".png,.pdf"> <!--input tag에는 id라는 attribute를 써준다. -->
+        <!--for과 id에 들어가는 value값은 동일해야 한다.
+        label은 for과 같은 값을 갖는 id의 input 구문을 동작시켜준다.-->
+
+        <br>
+
+        <label for="first-name">성</label>
+        <input id="first-name" required placeholder="First Name을 입력하세요." type="text">
+        <!--First name 글자를 웹사이트에서 누르면 name 칸에 입력을 바로 할 수 있게 된다.-->
+        
+        <br>
+
+        <label for="website">웹사이트</label>
+        <input id="website" required placeholder="url을 입력하세요." type="url"/>
+        <!--url 전용 칸이기 때문에 url외에 다른 문자를 쓰면 'url을 입력하세요'라는 창이 뜬다. -->
+
+        <br>
+
+        <label for="email">이메일</label>
+        <input id="email" required placeholder="Email을 입력하세요." type="email"/>
+        <!--완전한 이메일 형식이 될 때 까지 '@을 이메일에 포함시켜주세요.'등의 문구가 뜬다.-->
+
+        <br>
+
+        <label for="range">범위</label>
+        <input id="range" required placeholder="Name" type="range"/>
+        <!--range type-->
+
+        <br>
+
+        <label for="date">날짜</label>
+        <input id="date" required placeholder="Name" type="date"/>
+        <!--date type/문자가 아닌 숫자를 입력할 수 있고 ⬇️⬆️로 업다운 할 수 있다.-->
+
+        <!--id는 body안에 어떤 태그에든 넣을 수 있는 attribute다.
+        그 이유는 id는 unique identifier(고유 식별자)이기 때문.
+        element당 하나의 id만 가질 수 있는게 id의 규칙. 태그당 하나의 id를 가질 수 있고, id의 value값은 고유해야한다.
+        왜? id라는 attribute는 scripting이나 CSS를 식별하기 위해서 쓴다.-->
+
+        <!--CSS는 id를 기준으로 '너는 파란색', '너는 빨간색'을 지정한다.
+        에를들어 'website라는 id를 가진 input을 파란색으로 해줘'-->
+
+        <input type="submit" value="Creat Account"/>
+
+        <!-- div의 유래
+        division : 분할, 구분, 경계선  또는 박스
+        문서를 보기만 해도 그 의미를 짐작할 수 있는 것을 semantic이라고 한다.
+        <div></div>는 의미는 없지만 문단을 구문할 수 있는 박스 기능이 있다.
+        
+        header는 div를 대체할 수 있지만 이 코드 자체로 의미가 있다.
+        `header` tag(body안에 포함). head(보이지 않는 tag)와 다름-->
+
+        <header> <!--website의 제목ㅡ 머릿말-->
+            <h1>The Gata Times</h1> 
+        </header>
+        <main> <!--본문을 의미하는 태그-->
+            <p>오늘의 날씨는 매우 화창합니다.</p>
+        </main>
+        <footer> <!--꼬릿말 의미하는 태그-->
+            &copy; 2023 Gata
+        </footer>
+
+<!-- # 아래처럼 위의 태그들을 전부 div(non-semantic tag:의미없는 태그)로 바꿔줘도 된다. 하지만 코드 자체를 이해하는데 약간 어렵다.
+그래서 semantic 방식으로 코드를 짜는 것을 추천!  이들을 container라고 한다. 모두 div로 대체 가능하지만 코드를 작성하거나 볼 때 어떤 의미인지
+직관적으로 쉽게 파악하기 위해서 semantic 태그를 쓴다. -->
+        <div>
+            <h1>The Gata Times</h1> <!--header 대신 div 써도 된다.-->
+        </div>
+        <div> <!--본문-->
+            <p>오늘의 날씨는 매우 화창합니다.</p>
+        </div>
+        <div> <!--꼬릿말-->
+            &copy; 2023 Gata
+        </div>
+
+        <span>짧은 단어를 위한 태그 hello</span>
+        <p>문단을 위한 태그, paragraph</p>
+        <!-- # span이나 p(non-semantic tag)를 사용해도 문제는 없지만 나와 팀원이 보기 쉽도록 semantic tag를 쓰는 것이 좋다.
+        예전에는 semantic 태그가 없어서 div태그 box가 덕지덕지 였지만 이제는 의미있는 box를 사용할 수 있다.
+        
+        h1 h2 h3가 뭉탱이로 있으면 hgroup태그를 사용해준다.
+        attribute 값에는 항상 큰따옴표를 사용해준다. ⭐
+
+        어떤 attribute(id)는 모든 태그가 사용할 수 있고, 일부 attribute(type, src)는 특정 태그(form에서의 input, image)에서만 사용한다.
+        
+        자주 사용하는 태그인 header, main, footer, navigation, sidebar/aside 외에는 암기대신 구글에서 찾아보자. -->
+    </form>
+</body>
+</html>
