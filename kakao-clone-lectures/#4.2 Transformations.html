@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gata Times</title>
+    <style>
+        img{
+            border: 10px solid rgb(225, 148, 148); /*이미지에 테두리를 만듦*/
+            border-radius: 50%; /*이미지를 원으로 만듦*/
+            transform: rotateX(20deg) rotateY(40deg) rotateZ(10deg)/*X,Y,Z축을 기준으로 돌림*/
+                       scaleX(2,2) /*scale 크기 조절. scaleX(2) scaleY(2)로도 조절 가능*/
+                       translateX(100px) /*옮기기*/
+                       skew(45deg); /*비스듬히 기울이기*/
+            transition: transform 2s ease-in-out; /*transition은 반드시 root에 있어야한다. root가 아닌 state에 있다면 마우스를 떼는 순간 Transition없이 원래대로 돌아가버린다.*/
+        }
+        img:hover{
+            transform: matrix(1, 2, 3, 4, 5, 6);
+        }
+        span{
+            font-size: 100px;
+            color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/logo.png" />
+    <span>hahaha</span>
+</body>
+</html>
