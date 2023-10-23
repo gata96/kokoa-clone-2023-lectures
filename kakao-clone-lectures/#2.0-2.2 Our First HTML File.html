@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <link 
+        rel="shortcut icon"
+        sizes="16x16 32x32 64x64"
+        href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico"
+    />
+    <title>Home - My first website.</title>
+    <meta name="description" content="This is my website"/>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <form>
+        <p>
+            <strong>가능한 파일 형식자</strong>
+            <input type="file" accept=".png"/> <!--png 타입의 파일을 업로드 할 수 있다.-->
+            <input type="file" accept=".image"/>
+            <input type="file" accept=".pdf"/>
+            <input type="file" accept=".png,.image,.pdf"/>
+            <!--로도 위의 세 줄을 한꺼번에 쓸수있다.-->
+        </p>
+        <p>
+            <strong>색 지정</strong>
+            <input type="color">
+        </p>
+        
+        <p>
+            <strong>이름,성,유저네임,비밀번호</strong>
+            <input required placeholder="Name" type="text"> <!--name, placeholder는 input의 또다른 attribute-->
+            <input required placeholder="Last Name" type="text"> <!--last name-->
+            <input  placeholder="Username" minlength="10" type="text"> <!--user name,길이가 최소한 10이상은 되어야함-->
+            <input required placeholder="Password"type="password" > <!-- password-->
+        </p>
+
+        <p>
+            <strong>성별</strong>
+            <input type="radio" name="gender" value="M">남자
+            <input type="radio" name="gender" value="F">여자
+        </p>
+        <p>
+            <strong>응시분야</strong>
+            <input type="checkbox" name="part" value="English">영어
+            <input type="checkbox" name="part" value="Math">수학
+        </p>
+    
+        <p>
+            <strong>제출 버튼</strong>
+            <input type="submit" value="제출"/> <!--'제출'버튼-->
+            <input type="submit" disabled /> <!--'제출'버튼을 클릭할 수 없음-->
+            <input type="submit" value="Creat Account"/> <!--버튼 이름을 'Creat Account'로 변경-->
+        </p>
+
+    </form>
+</body>
+</html>
