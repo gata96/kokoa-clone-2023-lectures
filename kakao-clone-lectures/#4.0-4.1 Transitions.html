@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        a{
+            color: wheat;
+            background-color: tomato;
+            text-decoration: none; /*밑줄 없애기*/
+            padding: 3px 5px; /*상자안과 글자 사이의 공간*/
+            border-radius: 5px; /*상자 경계 둥글게*/
+            font-size: 55px;
+            transition: all 5s ease-in-out; 
+        }
+        a:hover{
+            border-radius: 20px;
+            color: tomato;
+            background-color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">Go home</a>
+</body>
+</html>
