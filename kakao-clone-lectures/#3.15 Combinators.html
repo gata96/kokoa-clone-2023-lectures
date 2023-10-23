@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gata Times</title>
+    <style>
+        body{
+            height: 1000vh;
+            margin:50px;
+        }
+        span{
+            background-color: yellowgreen;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        p span{
+            color: white;
+        }
+        div > span{
+            text-decoration: underline;
+        }
+        span + p{
+            color: hotpink;
+        }
+        span ~ address{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>Hello</span>
+        <p>voce e a melhor pessoa que eu poderia encontrar em minha vida. <span>inside</span>
+        </p>
+        <address>link</address>
+    </div>
+</body>
+</html>
