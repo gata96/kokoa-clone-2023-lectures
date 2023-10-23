@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gata Times</title>
+    <style>
+        body{
+            height: 1000vh;
+            margin:50px;
+        }
+        input{
+            border: 1px solid wheat;
+        }
+        input:required{
+            border-color: tomato;
+        }
+        input[type="password"]{
+            background-color: thistle;
+        }
+        input[placeholder~="name"]{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <input type="text" placeholder="User name"/>
+            <input type="password" required placeholder="Password"/>
+            <input type="text" placeholder="First name">
+            <input type="text" placeholder="Last name">
+        </form>
+    </div>
+</body>
+</html>
