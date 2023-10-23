@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button1:active{
+            background-color: tomato;
+        }
+        #button2:hover{
+            background-color: tomato;
+        }
+        input:focus{
+            background-color: tomato;
+        }
+        a:visited{
+            color: tomato;
+        }
+        a:hover{
+            color: teal;
+        }
+        a:focus{
+            color: hotpink;
+        }
+        form{
+            border: 1px solid salmon;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+
+            /*
+            - form 형식에 3개의 input을 만든 후
+            - form에 border를 준다.
+            - form의 display를 flex로 만든다.
+            - form에 padding(border에서 안쪽으로 공간을 만들어줌)을 넣는다.*/
+        }
+        form:focus-within{
+            border-color: seagreen;
+            border-width: 10px;
+        }
+        form:hover input{
+            background-color: burlywood;
+        }
+        form:hover input:focus{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div><button id="button1">active</button></div>
+    <div><button id="button2">hover</button></div>
+    <div><input type="text"/><input type="text"/></div>
+    <div><a href="https://apple.com">Go to apple</a></div>
+    <div>
+        <form>
+            <input type="text" name="" id="" />
+            <input type="text" name="" id="" />
+            <input type="text" name="" id="" />
+        </form>
+    </div>
+</body>
+        
+    
